@@ -147,3 +147,198 @@ System.DivideByZeroException: Can not divide by zero
 2018-05-30T16:01:04.4104909+03:00 0HLE65LF8MQJD:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
 2018-05-30T16:01:04.4251720+03:00 0HLE65LF8MQJD:00000003 [INF] Executed action "APICalculator.Controllers.CalculateController.Divide (APICalculator)" in 1771.4167ms (afa2e885)
 2018-05-30T16:01:04.4314381+03:00 0HLE65LF8MQJD:00000003 [INF] Request finished in 1836.7219ms 400 application/json; charset=utf-8 (791a596a)
+2018-05-30T17:11:04.8669408+03:00 0HLE66SN6JTC5:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55756/  0 (ca22a1cb)
+2018-05-30T17:11:04.8669407+03:00 0HLE66SN6JTC4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55756/api/values   (ca22a1cb)
+2018-05-30T17:11:04.9128178+03:00 0HLE66SN6JTC5:00000001 [INF] Request finished in 114.1647ms 200  (791a596a)
+2018-05-30T17:11:04.9850000+03:00 0HLE66SN6JTC4:00000001 [INF] Request finished in 194.5733ms 404  (791a596a)
+2018-05-30T17:11:09.0966422+03:00 0HLE66SN6JTC5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55756/swagger/   (ca22a1cb)
+2018-05-30T17:11:09.1104500+03:00 0HLE66SN6JTC5:00000002 [INF] Request finished in 14.3923ms 200 text/html (791a596a)
+2018-05-30T17:11:09.5770447+03:00 0HLE66SN6JTC4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55756/swagger/v1/swagger.json   (ca22a1cb)
+2018-05-30T17:11:09.7441513+03:00 0HLE66SN6JTC4:00000002 [INF] Request finished in 168.1038ms 200 application/json (791a596a)
+2018-05-30T17:11:24.3322248+03:00 0HLE66SN6JTC5:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:55756/api/Calculate/add application/json-patch+json 28 (ca22a1cb)
+2018-05-30T17:11:24.4809475+03:00 0HLE66SN6JTC5:00000003 [INF] Executing action method "APICalculator.Controllers.CalculateController.Add (APICalculator)" with arguments ([""]) - ModelState is Invalid (ba7f4ac2)
+2018-05-30T17:11:35.2663394+03:00 0HLE66SN6JTC5:00000003 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at APICalculator.Controllers.CalculateController.Add(CalculationModel model) in C:\Projects\Test\APICalculator\APICalculator\Controllers\CalculateController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext() (db62e737)
+2018-05-30T17:11:35.2762051+03:00 0HLE66SN6JTC5:00000003 [INF] Executed action "APICalculator.Controllers.CalculateController.Add (APICalculator)" in 10929.6001ms (afa2e885)
+2018-05-30T17:11:35.3091089+03:00 0HLE66SN6JTC5:00000003 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at APICalculator.Controllers.CalculateController.Add(CalculationModel model) in C:\Projects\Test\APICalculator\APICalculator\Controllers\CalculateController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ExceptionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-30T17:11:35.3627808+03:00 0HLE66SN6JTC5:00000003 [INF] Request finished in 11076.4692ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-30T17:16:28.4360140+03:00 0HLE66VNKFNCJ:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55756/  0 (ca22a1cb)
+2018-05-30T17:16:28.4360141+03:00 0HLE66VNKFNCK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55756/api/values   (ca22a1cb)
+2018-05-30T17:16:28.4793086+03:00 0HLE66VNKFNCJ:00000001 [INF] Request finished in 90.5555ms 200  (791a596a)
+2018-05-30T17:16:28.5553506+03:00 0HLE66VNKFNCK:00000001 [INF] Request finished in 173.6648ms 404  (791a596a)
+2018-05-30T17:16:29.1263638+03:00 0HLE66VNKFNCJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55756/swagger/   (ca22a1cb)
+2018-05-30T17:16:29.1425817+03:00 0HLE66VNKFNCJ:00000002 [INF] Request finished in 14.6606ms 200 text/html (791a596a)
+2018-05-30T17:16:29.5894110+03:00 0HLE66VNKFNCK:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55756/swagger/v1/swagger.json   (ca22a1cb)
+2018-05-30T17:16:29.7663000+03:00 0HLE66VNKFNCK:00000002 [INF] Request finished in 177.6128ms 200 application/json (791a596a)
+2018-05-30T17:16:41.2357210+03:00 0HLE66VNKFNCJ:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:55756/api/Calculate/add application/json-patch+json 27 (ca22a1cb)
+2018-05-30T17:16:41.3818876+03:00 0HLE66VNKFNCJ:00000003 [INF] Executing action method "APICalculator.Controllers.CalculateController.Add (APICalculator)" with arguments ([""]) - ModelState is Invalid (ba7f4ac2)
+2018-05-30T17:16:46.1589805+03:00 0HLE66VNKFNCJ:00000003 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at APICalculator.Controllers.CalculateController.Add(CalculationModel model) in C:\Projects\Test\APICalculator\APICalculator\Controllers\CalculateController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext() (db62e737)
+2018-05-30T17:16:46.1707125+03:00 0HLE66VNKFNCJ:00000003 [INF] Executed action "APICalculator.Controllers.CalculateController.Add (APICalculator)" in 4885.0758ms (afa2e885)
+2018-05-30T17:16:46.2059336+03:00 0HLE66VNKFNCJ:00000003 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at APICalculator.Controllers.CalculateController.Add(CalculationModel model) in C:\Projects\Test\APICalculator\APICalculator\Controllers\CalculateController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ExceptionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-30T17:16:46.2570378+03:00 0HLE66VNKFNCJ:00000003 [INF] Request finished in 5031.3782ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-30T17:24:25.0159191+03:00 0HLE6745LEF4H:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55756/  0 (ca22a1cb)
+2018-05-30T17:24:25.0159190+03:00 0HLE6745LEF4I:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55756/api/values   (ca22a1cb)
+2018-05-30T17:24:25.0527712+03:00 0HLE6745LEF4H:00000001 [INF] Request finished in 111.3788ms 200  (791a596a)
+2018-05-30T17:24:25.1386082+03:00 0HLE6745LEF4I:00000001 [INF] Request finished in 197.9244ms 404  (791a596a)
+2018-05-30T17:24:26.6132945+03:00 0HLE6745LEF4H:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55756/swagger/   (ca22a1cb)
+2018-05-30T17:24:26.6306608+03:00 0HLE6745LEF4H:00000002 [INF] Request finished in 17.0528ms 200 text/html (791a596a)
+2018-05-30T17:24:27.0436411+03:00 0HLE6745LEF4I:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55756/swagger/v1/swagger.json   (ca22a1cb)
+2018-05-30T17:24:27.2599341+03:00 0HLE6745LEF4I:00000002 [INF] Request finished in 216.3272ms 200 application/json (791a596a)
+2018-05-30T17:24:38.5075534+03:00 0HLE6745LEF4H:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:55756/api/Calculate/add application/json-patch+json 26 (ca22a1cb)
+2018-05-30T17:24:38.6594580+03:00 0HLE6745LEF4H:00000003 [INF] Executing action method "APICalculator.Controllers.CalculateController.Add (APICalculator)" with arguments ([""]) - ModelState is Invalid (ba7f4ac2)
+2018-05-30T17:24:48.4760287+03:00 0HLE6745LEF4H:00000003 [ERR] System.Exception: Model is not valid
+   at APICalculator.Controllers.CalculateController.Add(CalculationModel model) in C:\Projects\Test\APICalculator\APICalculator\Controllers\CalculateController.cs:line 35
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext() (11677125)
+2018-05-30T17:24:48.4849753+03:00 0HLE6745LEF4H:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-05-30T17:24:48.4977816+03:00 0HLE6745LEF4H:00000003 [INF] Executed action "APICalculator.Controllers.CalculateController.Add (APICalculator)" in 9941.0758ms (afa2e885)
+2018-05-30T17:24:48.5045063+03:00 0HLE6745LEF4H:00000003 [INF] Request finished in 10004.8398ms 400 application/json; charset=utf-8 (791a596a)
+2018-05-30T17:25:42.3866634+03:00 0HLE674SN7QQ2:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55756/  0 (ca22a1cb)
+2018-05-30T17:25:42.3866601+03:00 0HLE674SN7QQ3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55756/api/values   (ca22a1cb)
+2018-05-30T17:25:42.3866599+03:00 0HLE674SN7QQ4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55756/swagger/   (ca22a1cb)
+2018-05-30T17:25:42.4412600+03:00 0HLE674SN7QQ2:00000001 [INF] Request finished in 118.1079ms 200  (791a596a)
+2018-05-30T17:25:42.5288262+03:00 0HLE674SN7QQ3:00000001 [INF] Request finished in 221.8097ms 404  (791a596a)
+2018-05-30T17:25:42.5403390+03:00 0HLE674SN7QQ4:00000001 [INF] Request finished in 157.5161ms 200 text/html (791a596a)
+2018-05-30T17:25:42.9119986+03:00 0HLE674SN7QQ2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55756/swagger/v1/swagger.json   (ca22a1cb)
+2018-05-30T17:25:43.1038964+03:00 0HLE674SN7QQ2:00000002 [INF] Request finished in 190.4924ms 200 application/json (791a596a)
+2018-05-30T17:25:52.7928598+03:00 0HLE674SN7QQ3:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:55756/api/Calculate/add application/json-patch+json 26 (ca22a1cb)
+2018-05-30T17:25:52.9527699+03:00 0HLE674SN7QQ3:00000002 [INF] Executing action method "APICalculator.Controllers.CalculateController.Add (APICalculator)" with arguments ([""]) - ModelState is Invalid (ba7f4ac2)
+2018-05-30T17:26:00.3552585+03:00 0HLE674SN7QQ3:00000002 [ERR] System.Exception: Model is not valid
+   at APICalculator.Controllers.CalculateController.ValidateModel() in C:\Projects\Test\APICalculator\APICalculator\Controllers\CalculateController.cs:line 69
+   at APICalculator.Controllers.CalculateController.Add(CalculationModel model) in C:\Projects\Test\APICalculator\APICalculator\Controllers\CalculateController.cs:line 31
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext() (bf7aa0f5)
+2018-05-30T17:26:00.3654893+03:00 0HLE674SN7QQ3:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-05-30T17:26:00.3784379+03:00 0HLE674SN7QQ3:00000002 [INF] Executed action "APICalculator.Controllers.CalculateController.Add (APICalculator)" in 7518.2486ms (afa2e885)
+2018-05-30T17:26:00.3862771+03:00 0HLE674SN7QQ3:00000002 [INF] Request finished in 7597.7702ms 400 application/json; charset=utf-8 (791a596a)

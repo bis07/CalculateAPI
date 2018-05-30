@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
@@ -23,7 +20,18 @@ namespace APICalculator.Infrastructure
             var ex = context.Exception;
             _logger.LogError(ex.ToString());
 
+          
             if (ex.GetType() == typeof(DivideByZeroException))
+            {
+                var json = new JsonErrorResponse
+                {
+                    Messages = new[] { ex.Message }
+                };
+
+                context.Result = new BadRequestObjectResult(json);
+                context.HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+            }
+            if (ex.GetType() == typeof(Exception))
             {
                 var json = new JsonErrorResponse
                 {

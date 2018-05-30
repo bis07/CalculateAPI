@@ -3,16 +3,16 @@ namespace APICalculator.Services.Contracts
 {
     public interface ICalculateService
     {
-        int Add(decimal x, decimal y);
+        int Add(double x, double y);
 
-        int Subtract(decimal x, decimal y);
+        int Subtract(double x, double y);
 
-        int Multiply(decimal x, decimal y);
+        int Multiply(double x, double y);
 
-        int Divide(decimal x, decimal y);
+        int Divide(double x, double y);
 
-        int Exponente(decimal x, decimal y);
+        int Exponente(double x, double y);
 
-        decimal GetResult(int id);
+        double GetResult(int id);
     }
 }

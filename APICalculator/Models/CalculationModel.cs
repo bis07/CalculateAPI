@@ -5,9 +5,9 @@ namespace APICalculator.Models
     public class CalculationModel
     {
         [Required]
-        public decimal X { get; set; }
+        public double X { get; set; }
 
         [Required]
-        public decimal Y { get; set; }
+        public double Y { get; set; }
     }
 }
