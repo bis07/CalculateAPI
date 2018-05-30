@@ -18,6 +18,7 @@ namespace APICalculator.Services
             _increment = 0;
             _logger = logger;
         }
+
         public int Add(double x, double y)
         {
             _logger.LogInformation($"Adding number {x} and {y}");
